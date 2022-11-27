@@ -18,6 +18,7 @@ main {
    padding: 0.1rem;
 }
 .gameboard button {
+   font-size: 1rem;
    background-color: white;
    border: 0;
    transition: 90ms;
