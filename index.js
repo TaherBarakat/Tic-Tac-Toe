@@ -1,28 +1,32 @@
 let gameBoard = (function () {
-   let _gameBoard = ["j", "x", "o", "x", "x", "o", "x", "o", "x"];
+   let _gameBoard = [];
+
    let toggle = true;
 
    let createNewGame = (a, b) => {
       let player_1 = createPlayer(a, "x");
       let player_2 = createPlayer(b, "o");
-
       gameBoard.players = { player_1, player_2 };
    };
 
    let currentPlayer = () => {
       if (toggle) {
          toggle = !toggle;
-         // console.log(toggle);
          return gameBoard.players.player_1;
       } else if (!toggle) {
          toggle = !toggle;
-         // console.log(toggle);
          return gameBoard.players.player_2;
       }
+   };
+
+   let bindDomToGameBoard = (a) => {
+      _gameBoard[a.getAttribute("id")] = a.innerText;
+      console.log(_gameBoard);
    };
    return {
       currentPlayer,
       createNewGame,
+      bindDomToGameBoard,
       _gameBoard,
    };
 })();
@@ -44,8 +48,10 @@ let displayController = (function () {
    gameBoardFields.forEach((a) =>
       a.addEventListener("click", (e) => {
          checkIfPressed(e.target);
+         gameBoard.bindDomToGameBoard(e.target);
       })
    );
+
    let fillTheGameBoard = () => {
       let counter = 0;
       gameBoardFields.forEach((a) => {
