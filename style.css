@@ -12,13 +12,15 @@ main {
 .gameboard {
    width: 25vw;
    height: 25vw;
+   min-width: 200px;
+   min-height: 200px;
    display: grid;
    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
    background-color: rgb(0, 0, 0);
    padding: 0.1rem;
 }
 .gameboard button {
-   font-size: 1rem;
+   font-size: 3em;
    background-color: white;
    border: 0;
    transition: 90ms;

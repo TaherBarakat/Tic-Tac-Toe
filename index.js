@@ -1,5 +1,5 @@
 let gameBoard = (function () {
-   let _gameBoard = [];
+   let _gameBoard = [NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN];
 
    let toggle = true;
 
@@ -21,12 +21,43 @@ let gameBoard = (function () {
 
    let bindDomToGameBoard = (a) => {
       _gameBoard[a.getAttribute("id")] = a.innerText;
-      console.log(_gameBoard);
+      // console.log(_gameBoard);
    };
+   let checkResult = () => {
+      // check the rows
+      for (let i = 0; i <= 6; i += 3) {
+         if (
+            _gameBoard[i] === _gameBoard[i + 1] &&
+            _gameBoard[i + 1] === _gameBoard[i + 2]
+         )
+            return `winner is ${_gameBoard[i]}`;
+      }
+      // check the columns
+      for (let i = 0; i <= 3; i += 1) {
+         if (
+            _gameBoard[i] === _gameBoard[i + 3] &&
+            _gameBoard[i + 3] === _gameBoard[i + 6]
+         )
+            return `winner is ${_gameBoard[i]}`;
+      }
+      // check cross
+      if (
+         (_gameBoard[0] == _gameBoard[4] && _gameBoard[4] == _gameBoard[8]) ||
+         (_gameBoard[2] == _gameBoard[4] && _gameBoard[4] == _gameBoard[6])
+      ) {
+         return `winner is ${_gameBoard[4]}`;
+      }
+
+      return _gameBoard.every((a) => a == "x" || a == "o")
+         ? "tie"
+         : "keep play";
+   };
+
    return {
       currentPlayer,
       createNewGame,
       bindDomToGameBoard,
+      checkResult,
       _gameBoard,
    };
 })();
@@ -49,6 +80,7 @@ let displayController = (function () {
       a.addEventListener("click", (e) => {
          checkIfPressed(e.target);
          gameBoard.bindDomToGameBoard(e.target);
+         console.log(gameBoard.checkResult());
       })
    );
 
@@ -71,3 +103,4 @@ let createPlayer = function (name, role) {
 
    return { name, score, role };
 };
+gameBoard.createNewGame("d", "f");
