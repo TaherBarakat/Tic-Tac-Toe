@@ -5,23 +5,58 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap"
+         rel="stylesheet"
+      />
       <title>Tic-Tac-Toe</title>
    </head>
    <body>
-      <section>Tic-Tac-Toe</section>
+      <nav><h1>Tic-Tac-Toe</h1></nav>
+
+      <section class="start-new-game">
+         <div>
+            <form action="">
+               <label for="player_1">
+                  player 1 (X)
+                  <input
+                     autofocus
+                     id="player_1"
+                     value="player_1"
+                     placeholder="Enter Name"
+                     type="text"
+               /></label>
+               <label for="player_2">
+                  player 1 (O)
+                  <input
+                     id="player_2"
+                     value="player_2"
+                     placeholder="Enter Name"
+                     type="text"
+               /></label>
+            </form>
+            <button>Start New Game</button>
+         </div>
+      </section>
       <main>
          <div class="gameboard">
-            <button id="0"></button>
-            <button id="1"></button>
-            <button id="2"></button>
-            <button id="3"></button>
-            <button id="4"></button>
-            <button id="5"></button>
-            <button id="6"></button>
-            <button id="7"></button>
-            <button id="8"></button>
+            <button class="gameboard-field" id="0"></button>
+            <button class="gameboard-field" id="1"></button>
+            <button class="gameboard-field" id="2"></button>
+            <button class="gameboard-field" id="3"></button>
+            <button class="gameboard-field" id="4"></button>
+            <button class="gameboard-field" id="5"></button>
+            <button class="gameboard-field" id="6"></button>
+            <button class="gameboard-field" id="7"></button>
+            <button class="gameboard-field" id="8"></button>
          </div>
       </main>
+      <!-- <section>
+         <div class="result"></div>
+         <button>llllllll</button>
+      </section> -->
       <script src="index.js"></script>
    </body>
 </html>

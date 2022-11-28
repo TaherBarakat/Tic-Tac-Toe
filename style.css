@@ -2,12 +2,89 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: "Freckle Face", cursive;
 }
-main {
-   height: 100vh;
+nav {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 15vh;
+   width: 100vw;
+   font-size: 2.5rem;
+   text-shadow: -5px 5px 7px rgba(0, 0, 0, 0.45);
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+section {
+   text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.582);
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   height: 85vh;
+   width: 100vw;
+}
+section form {
+   font-size: 1.5rem;
+   padding: 1rem;
+   width: 50vw;
+   min-width: 200px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   text-align: center;
+   justify-items: center;
+}
+section div {
+   padding: 1rem;
+   flex-wrap: wrap;
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: column;
+}
+section form input {
+   box-shadow: -3px 3px 3px 0px rgba(0, 0, 0, 0.75);
+   display: block;
+   margin: 1rem;
+   padding: 0.5rem 1rem;
+   border: 0;
+   width: 80%;
+   border-radius: 5px;
+   outline: none;
+   transition: 90ms;
+}
+section form input:focus {
+   scale: 110%;
+   border: 0;
+   box-shadow: -7px 7px 7px 0px rgba(0, 0, 0, 0.75);
+}
+section div button {
+   font-size: 1.5rem;
+   margin: 1rem;
+   padding: 1rem;
+   border-radius: 10px;
+   outline: none;
+   border: 0;
+   box-shadow: -5px 5px 7px 0px rgba(0, 0, 0, 0.75);
+   background-color: black;
+   color: white;
+   transition: 90ms;
+}
+section div button:active {
+   scale: 99%;
+   font-size: 1.4rem;
+   border-radius: 15px;
+   box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+main {
+   height: 85vh;
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+   display: none;
 }
 .gameboard {
    width: 25vw;

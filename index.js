@@ -65,7 +65,7 @@ let gameBoard = (function () {
 // ***************************************
 
 let displayController = (function () {
-   let gameBoardFields = document.querySelectorAll("button");
+   let gameBoardFields = document.querySelectorAll(".gameboard-field");
 
    let checkIfPressed = (a) => {
       if (a.getAttribute("data") == 1) {
