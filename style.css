@@ -51,12 +51,12 @@ section form input {
    outline: none;
    transition: 90ms;
 }
-section form input:focus {
+.start-new-game form input:focus {
    scale: 110%;
    border: 0;
    box-shadow: -7px 7px 7px 0px rgba(0, 0, 0, 0.75);
 }
-section div button {
+.start-new-game div button {
    font-size: 1.5rem;
    margin: 1rem;
    padding: 1rem;
@@ -68,7 +68,7 @@ section div button {
    color: white;
    transition: 90ms;
 }
-section div button:active {
+.start-new-game div button:active {
    scale: 99%;
    font-size: 1.4rem;
    border-radius: 15px;
@@ -76,15 +76,28 @@ section div button:active {
    background-color: rgb(255, 255, 255);
    color: rgb(0, 0, 0);
 }
+.start-new-game div button:hover {
+   scale: 130%;
+   font-size: 1.4rem;
+   border-radius: 15px;
+   box-shadow: -10px 10px 15px 0px rgba(0, 0, 0, 0.75);
+}
+
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 main {
    height: 85vh;
    width: 100vw;
    display: flex;
    align-items: center;
-   justify-content: center;
-   /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
-   display: none;
+   justify-content: flex-start;
+   flex-direction: column;
+}
+.info {
+   text-shadow: -5px 5px 7px rgba(0, 0, 0, 0.45);
+   text-align: center;
+   height: 10vh;
+   margin: 2rem;
+   font-size: 1.5rem;
 }
 .gameboard {
    width: 25vw;
@@ -106,4 +119,45 @@ main {
 .gameboard button:active {
    background-color: rgb(233, 233, 233);
    scale: 0.95;
+}
+.hide {
+   display: none;
+}
+/*  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+.result-section {
+   height: 100vh;
+   font-size: large;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.918);
+}
+.result-section .result {
+   height: 50vh;
+   width: 50vh;
+   box-shadow: -20px 20px 1px 1px rgba(0, 0, 0, 0.75);
+   border-radius: 2px;
+   background-color: white;
+}
+#play-again {
+   font-size: 1.5rem;
+   margin: 2rem;
+   padding: 1rem;
+   border-radius: 10px;
+   outline: none;
+   border: 0;
+   box-shadow: -5px 5px 7px 0px rgba(0, 0, 0, 0.75);
+   background-color: black;
+   color: white;
+   transition: 90ms;
+}
+
+#play-again:hover {
+   scale: 130%;
+   font-size: 1.4rem;
+   border-radius: 15px;
+   box-shadow: -10px 10px 15px 0px rgba(0, 0, 0, 0.75);
+}
+button {
+   cursor: pointer;
 }

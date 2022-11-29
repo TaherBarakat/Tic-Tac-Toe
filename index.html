@@ -24,7 +24,7 @@
                   <input
                      autofocus
                      id="player_1"
-                     value="player_1"
+                     value=""
                      placeholder="Enter Name"
                      type="text"
                /></label>
@@ -32,15 +32,16 @@
                   player 1 (O)
                   <input
                      id="player_2"
-                     value="player_2"
+                     value=""
                      placeholder="Enter Name"
                      type="text"
                /></label>
             </form>
-            <button>Start New Game</button>
+            <button id="start-new-game">Start New Game</button>
          </div>
       </section>
-      <main>
+      <main class="hide">
+         <div class="info">D</div>
          <div class="gameboard">
             <button class="gameboard-field" id="0"></button>
             <button class="gameboard-field" id="1"></button>
@@ -53,10 +54,12 @@
             <button class="gameboard-field" id="8"></button>
          </div>
       </main>
-      <!-- <section>
-         <div class="result"></div>
-         <button>llllllll</button>
-      </section> -->
+      <section class="result-section hide">
+         <div class="result">
+            <h2 class="result-massage"></h2>
+            <button id="play-again">Play Again</button>
+         </div>
+      </section>
       <script src="index.js"></script>
    </body>
 </html>
