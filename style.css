@@ -19,7 +19,7 @@ section {
    justify-content: center;
    align-items: center;
    display: flex;
-   height: 85vh;
+   height: 80vh;
    width: 100vw;
 }
 section form {
@@ -85,7 +85,7 @@ section form input {
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 main {
-   height: 85vh;
+   height: 80vh;
    width: 100vw;
    display: flex;
    align-items: center;
@@ -160,4 +160,12 @@ main {
 }
 button {
    cursor: pointer;
+}
+
+.taher {
+   height: 5vh;
+   text-align: center;
+}
+.taher a {
+   text-decoration: dashed;
 }
